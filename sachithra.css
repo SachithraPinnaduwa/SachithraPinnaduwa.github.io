@@ -1,0 +1,700 @@
+
+/* make the space between header and footer to page edges  */
+*{margin: 0;
+padding: 0;
+
+}
+
+
+/* adjust footer to correctly align with the rest of the page */
+html{overflow-x: hidden}
+
+/* create spacing vertically to make the footer
+ display correctly by making it stick to the bottom */
+body{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+
+}
+
+
+/* additional fonts from google */
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/Agbalumo-Regular.ttf);
+}
+@font-face {
+    font-family: mySecondFont;
+    src: url(fonts/BungeeSpice-Regular.ttf);
+}
+@font-face {
+    font-family: myThirdFont;
+    src: url(fonts/Lato-BoldItalic.ttf);
+}
+@font-face {
+    font-family: myForthFont;
+    src: url(fonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: myFifthFont;
+    src: url(fonts/Lato-Regular.ttf);
+}
+
+/* Add the following CSS rules to your existing CSS */
+nav ul {
+    list-style-type: none;
+    padding: 15% 20% 0 20%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-family: myThirdFont;
+    font-size: large;
+
+
+}
+#story{
+font-family: myForthFont;
+    font-size: large;
+    padding: 0 5% 0 5%;
+
+}
+#story h1{
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+#socials h5{
+    padding-top: 5%;
+    text-align: center;
+    font-size: xx-large;
+}
+#images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+#images div{
+    padding-left: 2%;
+    padding-top: 2%;
+    text-align: center;
+    font-family: "Berlin Sans FB Demi";
+    font-size: larger;
+}
+#images img[alt="thumbnail"]{
+    min-width: 200px;
+    min-height: 200px;
+
+}
+nav li {
+    margin: 0 ;
+    padding: 5% 5% 5% 5%;
+    text-overflow: ellipsis; /* Show an ellipsis for overflowed text */
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+
+}
+
+
+/* Add a media query to control the behavior on smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Change to a column layout on smaller screens */
+        align-items: center;    /* Center items vertically */
+
+
+    }
+    img[alt="logo"]{
+        display: none;
+    }
+    nav li{
+        padding-top: 10%;
+    }
+
+#left{
+    padding-top: 15%;
+}
+    #profile{
+        grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    }
+    textarea {
+        width: 15vh;
+        height: 15vh;
+    }
+
+}
+
+nav{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+
+
+a.active{
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 5px 10px 5px 10px;
+}
+
+#profile{
+    padding-top: 10%;
+    display: grid; /* Use flexbox for layout within the sections */
+    grid-template-columns: 3fr 1fr;
+
+}
+
+
+
+
+#profilea{
+    padding-top: 10%;
+    display: flex;
+    flex-wrap: wrap; /* Allow the content to wrap on smaller screens */
+
+}
+
+@media (max-width: 1100px) {
+    #profilea{
+
+        flex-direction: column;
+    }
+    #lefta{
+        width: 100%;
+        padding: 0 5%;
+
+
+    }
+    #righta{
+
+        width: 100%;
+    }
+}
+
+/* format the text in the project section */
+#projects aside {
+    padding: 2% 0 2% 0;
+    text-align: center;
+    font-family: myThirdFont;
+    font-size: xx-large;
+}
+
+
+footer ul li {
+    list-style-type: none;
+
+
+}
+.footer-right ul li {
+    display: inline;
+    margin-top: 5%;
+
+
+}
+/* this is used to display the footer correctly */
+.footer-container {
+    width: 90%;/* this is used to contain the content of the 
+                footer within 90% of its whole */
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    /* this is used to make the footer responsive */
+    align-items: flex-end;
+}
+
+/* this creates the footer */
+footer {
+    background-color: #ccc;
+    padding: 40px;
+    text-align: center;
+position: relative;
+    bottom: 0;
+    left: 0;
+    grid-row: 5;
+    width: 100%;
+
+
+}
+
+/* this creates the header */
+header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+    height: 100px;
+    width:100%;
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: row;
+
+}
+
+header img{
+    padding-left: 30%;
+}
+
+
+body:not(#academic,#sportsbody){
+    background-color: #3EECAC;
+    background-image: linear-gradient(19deg,#3EECAC 0%,#EE74E1 100%);
+
+}
+#bottom{
+
+    width: 100%;
+    height: 100vh;
+}
+#right{
+
+padding-right: 20vh;
+    padding-top: 5vh;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+#righta{
+
+
+    flex: 1;
+    width: 30%;
+
+}
+
+#lefta{
+    flex: 1;
+    width: 70%;
+    box-sizing: border-box; /* Include padding in the width calculation */
+    padding: 0 5% 0 5%;
+    font-family: myFifthFont;
+    font-size: x-large;
+
+}
+
+#left{
+    border: 5px dotted purple;
+padding-left: 5%;
+    padding-right: 5%;
+overflow-x: hidden;
+    word-wrap: break-word;
+
+}
+
+#p2{
+    font-size: larger;
+    font-family: myFirstFont;
+}
+
+#p1{
+    font-size: xxx-large;
+    text-align: center;
+    font-family: mySecondFont;
+}
+
+.project{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#projects div{
+    border: 5px double black;
+}
+
+
+
+img[alt="logo"]{
+    margin-top:0.5% ;
+    margin-right: 10%;
+    width: 80px;
+    height: 80px;
+}
+
+img[alt="sachithra"],[alt="webdesign"]{
+    width: 300px;
+    height: 300px;
+}
+
+/* Add keyframes for the animation */
+@keyframes imageAnimation {
+    0% {
+        transform: scale(1); /* Start with normal size */
+
+    }
+    50% {
+        transform: scale(1.2); /* Scale up to 120% size */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+    }
+}
+
+/* Apply the animation to the image */
+#profile #right img:not(img[alt="sachithraabout"]) {
+    
+/* 5-second animation, repeat infinitely */
+    animation: imageAnimation 10s infinite ; 
+}
+img[alt="sachithraabout"]{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 0 0 10%;
+   transition: all 2s ease;/* transition the image in size and margin */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+}
+img[alt="sachithraabout"]:hover{
+    width: 400px;
+    height: 400px;
+    margin: 0 10% 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+img[alt="sd1code"]{
+
+
+    width: 40%;
+    height: 40%;
+}
+
+img[alt*="sd1output"]{
+
+
+    width: 50%;
+    height: 40%;
+}
+
+img[alt="Customer"]{
+
+
+    width: 50%;
+    height: 40%;
+}
+
+img[alt="FoodQueue"]{
+
+
+    width: 30%;
+    height: 30%;
+}
+
+img[alt="main"]{
+
+
+    width: 600px;
+    height: 400px;
+}
+
+img[alt="queue"],img[alt="addcustomer"]{
+
+
+    width: 30%;
+    height: 40%;
+
+
+}
+
+img[alt="aboutus"]{
+
+
+    width: 30%;
+    height: 30%;
+}
+
+div img[alt="sachithra"],[alt="webdesign"]{
+    border-radius: 50%;
+   margin: 0 50% 0 25%;
+}
+
+#projects div img {
+    margin: 1% 1% 1% 0.5%;
+    align-content: center;
+}
+
+.form  {
+display: flex;
+justify-content: space-between;
+    margin: 1% 15% 5% 15%;
+    padding: 10% 10% 10% 10%;
+
+    border: 5px solid mediumvioletred;
+    border-radius: 100px;
+}
+
+.heading{
+    padding: 1% 1% 1% 1%;
+
+margin: 10% 15% 0 15%;
+  text-align: center;
+ font-family: myForthFont;
+    font-size: xx-large;
+}
+
+
+/* align the message content and submit button to the right */
+form:first-child{
+    flex: 1;
+}
+
+/* adjust the message above text box to be above it */
+form:last-child{
+    margin-left: 5%;
+    margin-top: 2%;
+ flex: 1;
+}
+
+/* align the labels */
+label{
+    display: inline-block;
+    width: 100px;
+    margin-top: 7px;
+}
+
+
+/* align the different kind of inputs */
+input {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+select{
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+/* jsutify the box and its content */
+.box-section{
+    padding: 12% 0% 5% 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    flex: 1 0 auto;
+    justify-content: center;
+}
+
+/* div that  hold blog posts  */
+.box{
+
+   
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    align-items: center;
+    
+}
+.box-section div p{
+    color: white;
+    font-family: myFirstFont;
+    font-size: xx-large;
+    padding: 50% 0 50% 0;
+}
+
+/* 
+Sets the background image and size for the first child element with class "box".
+*/
+.box:first-child{
+    background-image: url("images/box/academic.jpg");
+    background-size: 500px,500px;
+
+}
+.box:last-child{
+    background-image: url("images/box/stamps.jpg");
+    background-size: 500px,500px;
+
+}
+
+/* hover effct for academic blog */
+.box:first-child:hover{ 
+    background-image: url("images/box/academic.jpg");
+    background-size: 500px,500px;
+    transform: scale(1.1,1.1) ;
+}
+
+/* hover effct for hobbies blog */
+.box:last-child:hover{  
+    background-image: url("images/box/stamps.jpg");
+    background-size: 500px,500px;
+    transform: scale(1.1,1.1) ;
+}
+#sportsbody{
+background: rgba(52, 235, 110,0.3);
+}
+#academic{
+    background: rgba(235, 52, 113,0.3);
+}
+
+
+/* 
+This CSS rule targets all h5 elements that are direct children of a section element. 
+It applies a top padding of 5% and centers the text within these h5 elements.
+*/
+section > h5{
+    padding-top: 5%;
+    text-align: center;
+}
+
+
+/* 
+This CSS rule targets all p elements, excluding the one with id "academicsection", that are direct children of a section element. 
+It centers the text within these p elements.
+*/
+section > p :not(#academicsection){
+    text-align: center;
+}
+img[alt="thumbnail"]{
+    width: 30px;
+    height: 30px;
+}
+
+
+/* submit style to button  */
+input[type="submit"]{
+background-color: #EE74E1;
+    border-bottom-color: black;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    outline: purple;
+    cursor: pointer;
+
+
+}
+
+
+/* 
+This CSS rule targets input elements of type text, email, and tel. 
+It sets their width to 200px and height to 40px.
+*/
+input[type="text"],[type="email"],[type="tel"]{
+    width: 200px;
+    height: 40px;
+}
+
+textarea{
+margin-top: 6%;
+width: 25vh;
+    height: 25vh;
+}
+
+
+.form > p {
+    text-align: center;
+}
+
+
+
+#academicsection,#sports{
+    margin: 0 auto;
+}
+
+/* make the link underline dissapear */
+.box-section .box a{
+    text-decoration: none;
+}
+.form{
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+}
+
+
+#academicsection p{
+    font-family: myFifthFont;
+    padding: 0 5% 0 5%;
+    line-height: 2;
+
+
+}
+
+#academicsection h5{
+
+    font-size: xx-large;
+    padding-bottom: 5%;
+    text-decoration: underline;
+}
+@media (max-width: 850px) {
+
+    #academicsection h5 {
+        padding-top: 20%;
+    }
+    #sports h5 {
+        padding-top: 20%;
+        margin-bottom: 5%;
+    }
+    .heading p {
+        padding-top: 20%;
+    }
+}
+
+#academicsection{
+    padding: 5%  0 15% 0;
+
+}
+
+#academicsection img {
+
+    display: block;
+
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+#academicsection figcaption{
+    text-align: center;
+    font-family: myFifthFont;
+    font-size: large;
+    padding-bottom: 5%;
+}
+
+#sports p{
+    font-family: myFifthFont;
+    padding: 0 5% 0 5%;
+    line-height: 2;
+
+
+}
+
+#sports h5{
+    font-size: xx-large;
+    padding-bottom: 5%;
+    text-decoration: underline;
+}
+
+#sports{
+    padding: 5%  0 15% 0;
+
+}
+
+#sports img {
+ 
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+#sports figcaption{
+    text-align: center;
+    font-family: myFifthFont;
+    font-size: large;
+    padding-bottom: 5%;
+}
